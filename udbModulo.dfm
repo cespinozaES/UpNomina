@@ -6,7 +6,9 @@ object dbModulo: TdbModulo
   Width = 235
   object fdConexion: TFDConnection
     Params.Strings = (
-      'Database=C:\Users\camil\OneDrive\Escritorio\Nomina\UpNomina.db'
+      
+        'Database=C:\Users\camil\OneDrive\Escritorio\GitNomina\UpNomina.d' +
+        'b'
       'DriverID=SQLite')
     LoginPrompt = False
     Left = 112

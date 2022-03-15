@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "ccd788f3-2973-47cb-b6a4-0ff1fc6fdbb0",
+		"name": "UpNomina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear_detalle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MTA5ODYxMTcyOTpPNUZQTk1nTm5SUys4NDdpdk5uUkRhVTdDdnc9OjExNDU6ODAwMTQyNTU3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "api",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "EmpresaId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "EmpresaNit",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComNum",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "TipComId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComCons",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "PlaCueCod",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComTipMov",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComVal",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComNitDet",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComValRet",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComConDet",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "CenCosId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ComDocSop",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://184.107.23.232:8283/ENTERPRISE_CAPACITACION/app/ws_r/index.php/crear_detalle_comprobante",
+					"protocol": "http",
+					"host": [
+						"184",
+						"107",
+						"23",
+						"232"
+					],
+					"port": "8283",
+					"path": [
+						"ENTERPRISE_CAPACITACION",
+						"app",
+						"ws_r",
+						"index.php",
+						"crear_detalle_comprobante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear_encabezado",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "MTA5ODYxMTcyOTpPNUZQTk1nTm5SUys4NDdpdk5uUkRhVTdDdnc9OjExNDU6ODAwMTQyNTU3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "1098611729",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "O5FPNMgNnRS+847ivNnRDaU7Cvw=",
+							"type": "text"
+						},
+						{
+							"key": "EmpresaId",
+							"value": "1145",
+							"type": "text"
+						},
+						{
+							"key": "ComNum",
+							"value": "4510",
+							"type": "text"
+						},
+						{
+							"key": "TipComId",
+							"value": "CAU",
+							"type": "text"
+						},
+						{
+							"key": "ComFec",
+							"value": "08/09/2021",
+							"type": "text"
+						},
+						{
+							"key": "ComNit",
+							"value": "222222",
+							"type": "text"
+						},
+						{
+							"key": "ComCon",
+							"value": "PRUEBA",
+							"type": "text"
+						},
+						{
+							"key": "ComPerAgno",
+							"value": "2021",
+							"type": "text"
+						},
+						{
+							"key": "ComPerMes",
+							"value": "08",
+							"type": "text"
+						},
+						{
+							"key": "ComUltCons",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ComAnu",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://184.107.23.232:8283/ENTERPRISE_CAPACITACION/app/ws_r/index.php/crear_encabezado_comprobante2",
+					"protocol": "http",
+					"host": [
+						"184",
+						"107",
+						"23",
+						"232"
+					],
+					"port": "8283",
+					"path": [
+						"ENTERPRISE_CAPACITACION",
+						"app",
+						"ws_r",
+						"index.php",
+						"crear_encabezado_comprobante2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://184.107.23.232:8283/ENTERPRISE_CAPACITACION/app/ws_r/index.php/",
+			"type": "string"
+		}
+	]
+}

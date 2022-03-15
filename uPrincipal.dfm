@@ -4,8 +4,8 @@
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'Cargue de Nomina'
-  ClientHeight = 620
-  ClientWidth = 910
+  ClientHeight = 631
+  ClientWidth = 980
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -139,10 +139,10 @@
   PixelsPerInch = 96
   TextHeight = 13
   object sbtnSalir: TSpeedButton
-    Left = 872
+    Left = 929
     Top = 8
     Width = 28
-    Height = 24
+    Height = 25
     Hint = 'Salir'
     Glyph.Data = {
       82060000424D8206000000000000420000002800000014000000140000000100
@@ -201,8 +201,8 @@
     OnClick = sbtnSalirClick
   end
   object sbtnAyuda: TSpeedButton
-    Left = 872
-    Top = 111
+    Left = 929
+    Top = 70
     Width = 28
     Height = 25
     Hint = 'Ayuda'
@@ -262,10 +262,72 @@
       000000000000}
     OnClick = sbtnAyudaClick
   end
+  object SpeedButton1: TSpeedButton
+    Left = 929
+    Top = 39
+    Width = 28
+    Height = 25
+    Hint = 'Minimizar'
+    Glyph.Data = {
+      82060000424D8206000000000000420000002800000014000000140000000100
+      20000300000040060000000000000000000000000000000000000000FF0000FF
+      0000FF0000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000DF8A1518DD8D107FDB8D0F88DB8B0D88DB8B
+      0D88DB890D88DA890B88DA850B88DA850988DA850988DA850988DA850988DA85
+      0988DA850988D9850A7FDE850B1700000000000000000000000000000000DE92
+      137ADE9113FFDD9012FFDD8F11FFDC8D10FFDC8C0FFFDC8B0EFFDB8A0EFFDB89
+      0DFFDA880CFFDA870BFFD9850AFFD9850AFFD9850AFFD9850AFFD9860A7A0000
+      0000000000000000000000000000DF951680DF9415FFDF9314FFDA8F13FFD78C
+      13FFD68B12FFD68A11FFD58910FFD5870FFFD5860FFFD4850EFFD4840DFFD685
+      0CFFDA870BFFD9860AFFD9850A8000000000000000000000000000000000E199
+      1A80E19818FFE09717FFE6C791FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFE5C28DFFDB8A0EFFDB890DFFD9870C800000
+      0000000000000000000000000000E39D1C80E29C1AFFE29A19FFE0B466FFEDD7
+      B1FFEDD7B1FFEDD7B1FFEDD7B0FFEDD6B0FFEDD6B0FFEDD5B0FFECD5AFFFDDAD
+      60FFDD8E10FFDC8D10FFDB8B108000000000000000000000000000000000E39F
+      1E80E49F1DFFE39E1CFFE39D1BFFE19B1AFFE19A1AFFE09819FFE09718FFDF96
+      17FFDF9516FFDE9415FFDE9315FFDE9314FFDE9113FFDE9012FFDD8F12800000
+      0000000000000000000000000000E5A32080E5A31FFFE5A21FFFE4A01EFFE49F
+      1DFFE39E1CFFE39D1BFFE29C1AFFE29B1AFFE19A19FFE19818FFE09717FFE096
+      16FFDF9515FFDF9415FFDF93148000000000000000000000000000000000E7A7
+      2480E6A622FFE6A521FFE5A420FFE5A31FFFE5A21FFFE4A11EFFE49F1DFFE39E
+      1CFFE39D1BFFE29C1AFFE29B1AFFE19A19FFE19818FFE09717FFDF9516800000
+      0000000000000000000000000000E7AB2680E8AA24FFE7A924FFE7A823FFE6A6
+      22FFE6A521FFE6A420FFE5A320FFE5A21FFFE4A11EFFE49F1DFFE39E1CFFE39D
+      1BFFE29C1BFFE29B1AFFE1991A8000000000000000000000000000000000E9AF
+      2880E9AD27FFE9AC26FFE8AB25FFE8AA25FFE7A924FFE7A823FFE7A622FFE6A5
+      21FFE6A420FFE5A320FFE5A21FFFE4A11EFFE4A01DFFE39E1CFFE39D1C800000
+      0000000000000000000000000000EBB12A80EBB12AFFEAB029FFEAAF28FFE9AD
+      27FFE9AC26FFE8AB25FFE8AA25FFE7A924FFE7A823FFE7A722FFE6A521FFE6A4
+      21FFE5A320FFE5A21FFFE3A11E8000000000000000000000000000000000EDB5
+      2E80ECB42CFFECB32BFFEBB22AFFEBB12AFFEAB029FFEAAF28FFE9AE27FFE9AC
+      26FFE8AB26FFE8AA25FFE8A924FFE7A823FFE7A722FFE6A621FFE5A322800000
+      0000000000000000000000000000EDB93080EEB82FFFEDB72EFFEDB62DFFECB5
+      2CFFECB32BFFEBB22BFFEBB12AFFEAB029FFEAAF28FFE9AE27FFE9AD26FFE8AB
+      26FFE8AA25FFE8A924FFE7A7248000000000000000000000000000000000EFBD
+      3280EFBC31FFEFBA30FFEEB930FFEEB82FFFEDB72EFFEDB62DFFECB52CFFECB4
+      2BFFEBB22BFFEBB12AFFEAB029FFEAAF28FFE9AE27FFE9AD27FFE9AB26800000
+      0000000000000000000000000000F0BE327AF0BE33FFF0BE33FFF0BD32FFEFBC
+      31FFEFBB31FFEEB930FFEEB82FFFEDB72EFFEDB62DFFECB52CFFECB42CFFEBB3
+      2BFFEBB12AFFEAB029FFEAB0287A00000000000000000000000000000000F4BF
+      3518F0BD3374F0BF3377F0BF3377F0BF3377F0BF3377F0BD3177F0BD3177F0BA
+      3177EEBA2F77EEB82F77EEB62D77EEB62D77ECB42D77EBB42C74EAB52B180000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
+    OnClick = SpeedButton1Click
+  end
   object dbgEncabezado: TDBGrid
     Left = 0
     Top = 142
-    Width = 902
+    Width = 649
     Height = 195
     DataSource = dsEncabezado
     TabOrder = 0
@@ -276,59 +338,55 @@
     TitleFont.Style = []
     Columns = <
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'COMNUM'
-        Width = 50
+        Width = 55
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'COMFEC'
-        Width = 80
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'COMCON'
-        Width = 460
+        Width = 120
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'COMPERAGNO'
-        Width = 75
+        Width = 80
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'COMPERMES'
-        Width = 70
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'COMULTCOS'
-        Width = 70
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
         FieldName = 'COMANU'
         Width = 60
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPCOMID'
         Visible = True
       end>
   end
   object dbgDetalles: TDBGrid
     Left = 0
-    Top = 353
-    Width = 902
-    Height = 240
+    Top = 343
+    Width = 649
+    Height = 257
     DataSource = dsDetalles
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -337,11 +395,6 @@
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     Columns = <
-      item
-        Expanded = False
-        FieldName = 'CODIGOAUTO'
-        Visible = True
-      end
       item
         Expanded = False
         FieldName = 'COMNUM'
@@ -385,7 +438,7 @@
       item
         Expanded = False
         FieldName = 'COMCONDET'
-        Width = 150
+        Width = 80
         Visible = True
       end
       item
@@ -396,16 +449,9 @@
       item
         Expanded = False
         FieldName = 'COMDOCSOP'
-        Width = 70
+        Width = 65
         Visible = True
       end>
-  end
-  object ProgressBar1: TProgressBar
-    Left = 2
-    Top = 599
-    Width = 900
-    Height = 17
-    TabOrder = 2
   end
   object gpArchivos: TGroupBox
     Left = 8
@@ -415,13 +461,13 @@
     Color = clCream
     ParentBackground = False
     ParentColor = False
-    TabOrder = 3
+    TabOrder = 2
     object sbtnCargarService: TSpeedButton
       Left = 16
       Top = 67
-      Width = 137
+      Width = 280
       Height = 42
-      Caption = 'Cargar Service'
+      Caption = 'Cargar a Web Service'
       Enabled = False
       Glyph.Data = {
         060A0000424D060A000000000000420000002800000019000000190000000100
@@ -688,45 +734,24 @@
         00000000000000000000}
       OnClick = sbtnDetallesClick
     end
-    object SpeedButton1: TSpeedButton
-      Left = 176
-      Top = 78
-      Width = 105
-      Height = 22
-      OnClick = SpeedButton1Click
-    end
   end
   object GroupBox4: TGroupBox
-    Left = 319
+    Left = 336
     Top = 8
-    Width = 530
+    Width = 576
     Height = 128
-    TabOrder = 4
+    TabOrder = 3
     object sbtnAceptar: TSpeedButton
-      Left = 446
+      Left = 478
       Top = 51
       Width = 81
       Height = 26
       Caption = 'Aceptar'
       OnClick = sbtnAceptarClick
     end
-    object Label1: TLabel
-      Left = 464
-      Top = 17
-      Width = 31
-      Height = 13
-      Caption = 'Label1'
-    end
-    object Label2: TLabel
-      Left = 464
-      Top = 99
-      Width = 31
-      Height = 13
-      Caption = 'Label2'
-    end
     object GroupBox3: TGroupBox
-      Left = 15
-      Top = 49
+      Left = 39
+      Top = 50
       Width = 410
       Height = 35
       TabOrder = 0
@@ -750,6 +775,7 @@
         Width = 121
         Height = 21
         TabOrder = 0
+        Text = '800142557'
       end
       object edtId: TEdit
         Left = 81
@@ -757,11 +783,12 @@
         Width = 121
         Height = 21
         TabOrder = 1
+        Text = '1145'
       end
     end
     object GroupBox2: TGroupBox
-      Left = 15
-      Top = 7
+      Left = 39
+      Top = 8
       Width = 410
       Height = 35
       TabOrder = 1
@@ -796,8 +823,8 @@
       end
     end
     object GroupBox1: TGroupBox
-      Left = 15
-      Top = 89
+      Left = 39
+      Top = 90
       Width = 410
       Height = 35
       TabOrder = 2
@@ -814,8 +841,36 @@
         Width = 321
         Height = 21
         TabOrder = 0
+        Text = 
+          'http://184.107.23.232:8283/ENTERPRISE_CAPACITACION/app/ws_r/inde' +
+          'x.php'
       end
     end
+    object CheckBox1: TCheckBox
+      Left = 556
+      Top = 3
+      Width = 17
+      Height = 22
+      Enabled = False
+      TabOrder = 3
+    end
+  end
+  object pbProgreso: TProgressBar
+    Left = 8
+    Top = 606
+    Width = 949
+    Height = 17
+    TabOrder = 4
+  end
+  object mErrores: TMemo
+    Left = 664
+    Top = 142
+    Width = 293
+    Height = 458
+    Lines.Strings = (
+      '')
+    ScrollBars = ssVertical
+    TabOrder = 5
   end
   object odCargarArchivo: TOpenDialog
     Left = 432
@@ -839,6 +894,7 @@
     Top = 344
   end
   object qrEncabezado: TFDQuery
+    ObjectView = False
     Connection = dbModulo.fdConexion
     SQL.Strings = (
       'select * from COMPROBANTE_ENCABEZADO')

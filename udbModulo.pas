@@ -28,27 +28,27 @@ var
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
-
 {$R *.dfm}
 
 procedure TdbModulo.DataModuleCreate(Sender: TObject);
 begin
- {if FileExists(GetCurrentDir + '\' + 'UpNomina.db') then
- begin
- fdConexion.Close;
- fdConexion.Params.Database := GetCurrentDir + '\' + 'UpNomina.db';
- fdConexion.Open;
- end
- else
- begin
-   Application.MessageBox('No se encuentra el archivo a conexion de base de datos',
-        'Error', MB_OK + MB_ICONINFORMATION);
- end;}
+  if FileExists(GetCurrentDir + '\' + 'UpNomina.db') then
+  begin
+    fdConexion.Close;
+    fdConexion.Params.Database := GetCurrentDir + '\' + 'UpNomina.db';
+    fdConexion.Open;
+  end
+  else
+  begin
+    Application.MessageBox
+      ('No es posible conectarse a la base de datos por que no se encuentra el archivo UpNomina.db, recuerde que la base de datos debe estar en la misma carpeta que el ejecutable .exe',
+      'Error', MB_OK + MB_ICONINFORMATION);
+  end;
 end;
 
 procedure TdbModulo.DataModuleDestroy(Sender: TObject);
 begin
-{fdConexion.Close;}
+  fdConexion.Close;
 end;
 
 end.
