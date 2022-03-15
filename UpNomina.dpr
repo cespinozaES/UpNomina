@@ -2,15 +2,18 @@ program UpNomina;
 
 uses
   Vcl.Forms,
-  uPrincipal in 'uPrincipal.pas' {Form1},
-  udbModulo in 'udbModulo.pas' {dbModulo: TDataModule};
+  uPrincipal in 'uPrincipal.pas' {fmPrincipal},
+  udbModulo in 'udbModulo.pas' {dbModulo: TDataModule},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  TStyleManager.TrySetStyle('Aqua Light Slate');
+  Application.CreateForm(TfmPrincipal, fmPrincipal);
   Application.CreateForm(TdbModulo, dbModulo);
   Application.Run;
 end.
