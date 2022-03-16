@@ -40,6 +40,11 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+_history
+_recovery
+.dcu
+.local
+.identcache
 
 # TypeScript v1 declaration files
 typings/
@@ -49,9 +54,7 @@ typings/
 
 # Optional npm cache directory
 .npm
-.dcu
-.local
-.identcache
+
 
 # Optional eslint cache
 .eslintcache
