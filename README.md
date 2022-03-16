@@ -3,7 +3,7 @@ UpNomina es un software de cargue de archivos planos encargado de la comunicacio
 
 ## Instalación para Usuarios
 
-Es necesario descargar el repositorio en la opción Code/Download ZIP, pero solo se usara la carpeta Win32/Release, en esta carpeta se encuentra el archivo ejecutable UpNomina.exe y también se encuentra la base de datos, es necesario aclarar que para poder ejecutar el software sin problema debemos tener la base de datos siempre en la misma carpeta donde se encuentra el ejecutable .exe
+Es necesario descargar el repositorio en la opción Code/Download ZIP, pero solo se usara la carpeta Win32/Release, en esta carpeta se encuentra el archivo ejecutable UpNomina.exe y también se encuentra la base de datos, para poder ejecutar el software sin problema debemos tener la base de datos siempre en la misma carpeta donde se encuentra el ejecutable .exe
 
 
 ## Instalación para Pruebas y Mantenimiento
@@ -19,7 +19,7 @@ Abrimos la conexión con doble clic al modulo fdConexion y en la propiedad Datab
 
 
 ## Manejo del Software
-Para el uso correcto del aplicativo se debe tener en cuenta los archivos CSV y todas sus restricciones, cada archivo tiene una cantidad especifica de Columnas y Encabezados, se debe tener en cuenta que la cantidad de filas del archivo detalle es dependiente de la columna COMULTCOS del archivo encabezado, como se muestra en la imagen: 
+Para el uso correcto del aplicativo se debe tener en cuenta los archivos CSV y todas sus restricciones, cada archivo tiene una cantidad especifica de Columnas y Encabezados, la cantidad de filas del archivo detalle es dependiente de la columna COMULTCOS del archivo encabezado, como se muestra en la imagen: 
 ### Encabezado.CSV
 ![encabezado](https://user-images.githubusercontent.com/100435479/158603995-0db4ece9-8f51-48ee-8f9b-0add1292da33.jpg)
 
@@ -28,3 +28,16 @@ Para el uso correcto del aplicativo se debe tener en cuenta los archivos CSV y t
 
 
 ## Pruebas
+El manejo de pruebas para el envío de datos al Web service de Contabilidad se uso Postman, validando el envío de datos para luego realizarlo en código en delphi, fue necesaria la creación de 2 Request, uno para la creación del Comprobante del método crear_encabezado_comprobante2 y otro para la creación del detalle con el metodo crear_detalle_comprobante, también es necesario poner en el apartado de Headers del request un Key de Authorization codificado en base 64 de la siguiente forma:
+
+#### Datos:
+Usuario:Contraseña:IdEmpresa:NitEmpresa
+
+#### Ejemplo:
+123456:111111:3535:9595
+
+#### Ejemplo en base 64:
+MTIzNDU2OjExMTExMTozNTM1Ojk1OTU=
+
+El ejemplo en Postman se puede encontrar en el repositorio con el nombre del archivo UpNomina.postman_collection.json
+
