@@ -831,14 +831,14 @@
       object url: TLabel
         Left = 24
         Top = 10
-        Width = 12
+        Width = 103
         Height = 13
-        Caption = 'url'
+        Caption = 'Direcci'#243'n del Servidor'
       end
       object edturl: TEdit
-        Left = 80
+        Left = 133
         Top = 7
-        Width = 321
+        Width = 268
         Height = 21
         TabOrder = 0
         Text = 

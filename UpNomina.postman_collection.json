@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ccd788f3-2973-47cb-b6a4-0ff1fc6fdbb0",
+		"_postman_id": "05e579a7-0b3d-4a16-b935-e0a6754fdf69",
 		"name": "UpNomina",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -26,62 +26,62 @@
 						},
 						{
 							"key": "usuario",
-							"value": "",
+							"value": "user",
 							"type": "text"
 						},
 						{
 							"key": "clave",
-							"value": "",
+							"value": "1234",
 							"type": "text"
 						},
 						{
 							"key": "EmpresaId",
-							"value": "",
+							"value": "1111",
 							"type": "text"
 						},
 						{
 							"key": "EmpresaNit",
-							"value": "",
+							"value": "1111",
 							"type": "text"
 						},
 						{
 							"key": "ComNum",
-							"value": "",
+							"value": "1",
 							"type": "text"
 						},
 						{
 							"key": "TipComId",
-							"value": "",
+							"value": "CAU",
 							"type": "text"
 						},
 						{
 							"key": "ComCons",
-							"value": "",
+							"value": "1",
 							"type": "text"
 						},
 						{
 							"key": "PlaCueCod",
-							"value": "",
+							"value": "10000",
 							"type": "text"
 						},
 						{
 							"key": "ComTipMov",
-							"value": "",
+							"value": "C",
 							"type": "text"
 						},
 						{
 							"key": "ComVal",
-							"value": "",
+							"value": "0",
 							"type": "text"
 						},
 						{
 							"key": "ComNitDet",
-							"value": "",
+							"value": "1098111111",
 							"type": "text"
 						},
 						{
 							"key": "ComValRet",
-							"value": "",
+							"value": "0",
 							"type": "text"
 						},
 						{
@@ -146,22 +146,22 @@
 						},
 						{
 							"key": "usuario",
-							"value": "1098611729",
+							"value": "user",
 							"type": "text"
 						},
 						{
 							"key": "clave",
-							"value": "O5FPNMgNnRS+847ivNnRDaU7Cvw=",
+							"value": "1234",
 							"type": "text"
 						},
 						{
 							"key": "EmpresaId",
-							"value": "1145",
+							"value": "1111",
 							"type": "text"
 						},
 						{
 							"key": "ComNum",
-							"value": "4510",
+							"value": "1",
 							"type": "text"
 						},
 						{
@@ -171,7 +171,7 @@
 						},
 						{
 							"key": "ComFec",
-							"value": "08/09/2021",
+							"value": "20/05/2022",
 							"type": "text"
 						},
 						{
@@ -186,12 +186,12 @@
 						},
 						{
 							"key": "ComPerAgno",
-							"value": "2021",
+							"value": "2022",
 							"type": "text"
 						},
 						{
 							"key": "ComPerMes",
-							"value": "08",
+							"value": "05",
 							"type": "text"
 						},
 						{
