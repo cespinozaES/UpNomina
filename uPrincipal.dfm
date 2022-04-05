@@ -3,7 +3,7 @@
   Top = 0
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = 'Cargue de Nomina'
+  Caption = 'Sistema de cargue de N'#243'mina a ISL'
   ClientHeight = 631
   ClientWidth = 980
   Color = clBtnFace
@@ -746,7 +746,8 @@
       Top = 51
       Width = 81
       Height = 26
-      Caption = 'Aceptar'
+      Hint = 'Se validan los datos de conexi'#243'n al Web Service'
+      Caption = 'Validar'
       OnClick = sbtnAceptarClick
     end
     object GroupBox3: TGroupBox
@@ -842,8 +843,8 @@
         Height = 21
         TabOrder = 0
         Text = 
-          'http://184.107.23.232:8283/ENTERPRISE_CAPACITACION/app/ws_r/inde' +
-          'x.php'
+          'http://108.163.144.52:8082/ENTERPRISE_REAL/app/ws_r/index.php/NO' +
+          'MBREDELM'#201'TODO'
       end
     end
     object CheckBox1: TCheckBox
