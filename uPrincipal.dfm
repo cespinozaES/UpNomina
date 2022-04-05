@@ -842,9 +842,7 @@
         Width = 268
         Height = 21
         TabOrder = 0
-        Text = 
-          'http://108.163.144.52:8082/ENTERPRISE_REAL/app/ws_r/index.php/NO' +
-          'MBREDELM'#201'TODO'
+        Text = 'http://108.163.144.52:8082/ENTERPRISE_REAL/app/ws_r/index.php'
       end
     end
     object CheckBox1: TCheckBox
