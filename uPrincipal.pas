@@ -133,7 +133,7 @@ var
 begin
   if sListaColumna.Count = 11 then
   begin
-    if I = 0 then
+    {if I = 0 then
     begin
       if (sListaColumna[0] <> 'COMNUM') or (sListaColumna[1] <> 'TIPCOMID') or
         (sListaColumna[2] <> 'COMCONS') or (sListaColumna[3] <> 'PLACUECOD') or
@@ -146,12 +146,24 @@ begin
           sLineBreak);
         ivalidador := ivalidador + 1;
       end;
-    end
+    end }
     // Validamos el contenido de cada columna del archivo
-    else
-    begin
+    //else
+    //begin
       // ShowMessage(sListaColumna.Text);
       // Validamos si COMNUM es de tipo numérico
+
+      //--------------------------------------------------------------
+      { if sListaColumna.Count = 9 then
+    begin
+      sListaColumna.Add('000');
+      sListaColumna.Add('0');
+    end;
+    if sListaColumna.Count = 10 then
+    begin
+      ShowMessage(sListaColumna[9]);
+    end; }
+    //----------------------------------------------------------------
       if TryStrToInt(sListaColumna[0], inumero) = False then
       begin
         sListaErrores.Add('Error: No es un valor numérico, Celda: ' +
@@ -271,13 +283,14 @@ begin
           end;
         end;
       end;
-    end;
+    //end;
   end
   else
   begin
     sListaErrores.Add('Error: Cada fila debe tener 11 celdas /Fila:' +
       IntToStr(I + 1) + '' + sLineBreak);
     ivalidador := ivalidador + 1;
+
   end;
 end;
 
@@ -292,7 +305,7 @@ var
 begin
   if sListaColumna.Count = 8 then
   begin
-    if I = 0 then
+    {if I = 0 then
     begin
       sListaColumna.Text := UpperCase(sListaColumna.Text);
       if (sListaColumna[0] <> 'COMNUM') or (sListaColumna[1] <> 'COMFEC') or
@@ -305,10 +318,10 @@ begin
           sLineBreak);
         ivalidador := ivalidador + 1;
       end;
-    end
+    end  }
     // Validamos el contenido de cada columna del archivo
-    else
-    begin
+    //else
+    //begin
       // ShowMessage(sListaColumna.Text);
       // Validamos si COMNUM es de tipo numérico
       if TryStrToInt(sListaColumna[0], inumero) = False then
@@ -445,7 +458,7 @@ begin
           sListaCodEncabezado.Add(sListaColumna[0]);
         end;
       end;
-    end;
+    //end;
   end
   else
   begin
@@ -511,19 +524,19 @@ end;
 procedure TfmPrincipal.sbtnAyudaClick(Sender: TObject);
 begin
   Application.MessageBox('Archivo Encabezado:' + sLineBreak +
-    '1. COMNUM : Numérico' + sLineBreak + '2. COMFEC : Formato fecha DD/MM/YYYY'
-    + sLineBreak + '3. COMCON : Texto máximo de 80 carácteres' + sLineBreak +
-    '4. COMPERAGNO : Año, ejemplo: 2022' + sLineBreak +
-    '5. COMPERMES : Mes, ejemplo: 3' + sLineBreak + '6. COMULTCOS : Numérico' +
-    sLineBreak + '7. COMANU : 1 o 0' + sLineBreak + '8. TIPCOMID : 3 LETRAS' +
+    'COLUMNA A: Numérico' + sLineBreak + 'COLUMNA B: Formato fecha DD/MM/YYYY'
+    + sLineBreak + 'COLUMNA C: Texto máximo de 80 carácteres' + sLineBreak +
+    'COLUMNA D: Año, ejemplo: 2022' + sLineBreak +
+    'COLUMNA E: Mes, ejemplo: 3' + sLineBreak + 'COLUMNA F: Numérico' +
+    sLineBreak + 'COLUMNA G: 1 o 0' + sLineBreak + 'COLUMNA H: 3 LETRAS' +
     sLineBreak + '' + sLineBreak + 'Archivo Detalle:' + sLineBreak +
-    '1. COMNUM : Tipo Numérico Entero' + sLineBreak + '2. TIPCOMID : 3 LETRAS' +
-    sLineBreak + '3. COMCONS : Numérico' + sLineBreak +
-    '4. PLACUECOD : Numérico' + sLineBreak + '5. COMTIPOMOV : D o C' +
-    sLineBreak + '6. COMVAL : Numérico' + sLineBreak + '7. COMNITDET : Numérico'
-    + sLineBreak + '8. COMVALRET : Numérico' + sLineBreak +
-    '9. COMCONDET : Texto máximo de 80 carácteres' + sLineBreak +
-    '10. CENCOSID : Numérico' + sLineBreak + '11. COMDOCSOP : Numérico',
+    'COLUMNA A: Tipo Numérico Entero' + sLineBreak + 'COLUMNA B: 3 LETRAS' +
+    sLineBreak + 'COLUMNA C: Numérico' + sLineBreak +
+    'COLUMNA D: Numérico' + sLineBreak + 'COLUMNA E: D o C' +
+    sLineBreak + 'COLUMNA F: Numérico' + sLineBreak + 'COLUMNA G: Numérico'
+    + sLineBreak + 'COLUMNA H: Numérico' + sLineBreak +
+    'COLUMNA I: Texto máximo de 80 carácteres' + sLineBreak +
+    'COLUMNA J: Numérico' + sLineBreak + 'COLUMNA K: Numérico',
     'Ayuda', MB_OK + MB_ICONQUESTION);
 end;
 
@@ -731,7 +744,7 @@ begin
     qrysecundario.SQL.Add('DELETE FROM COMPROBANTE_DETALLE');
     qrysecundario.ExecSQL;
     sNombreArchivo := odCargarDetalles.FileName;
-    sListaEncabezado.LoadFromFile(sNombreArchivo, TEncoding.UTF8);
+    sListaEncabezado.LoadFromFile(sNombreArchivo);
     ivalidador := 0;
     sListaCodDetalles.Clear;
     // Limpiamos el memo de errores
@@ -822,7 +835,7 @@ begin
     qryprincipal.ExecSQL;
     sNombreArchivo := odCargarEncabezado.FileName;
     // Se carga la ruta del archivo
-    sListaEncabezado.LoadFromFile(sNombreArchivo, TEncoding.UTF8);
+    sListaEncabezado.LoadFromFile(sNombreArchivo);
     // Se carga el archivo csv a la Lista
     // Recorremos la lista completo para hacer las validaciones, extraemos cada fila del archivo en sListaColumna mediante su posición
     ivalidador := 0;
