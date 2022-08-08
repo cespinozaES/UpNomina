@@ -670,10 +670,10 @@ begin
       sldatosDet.Free;
     end;
     qrycargue := TFDQuery.Create(nil);
-    qrycargue.Connection := udbModulo.dbModulo.fdConexion;;
+    qrycargue.Connection := udbModulo.dbModulo.fdConexion;
     qrycargue.SQL.Clear;
     qrycargue.Close;
-    qrycargue.SQL.Add('INSERT INTO');
+    qrycargue.SQL.Add('INSERT OR REPLACE INTO');
     qrycargue.SQL.Add('LOG_CARGUE');
     qrycargue.SQL.Add('(COMNUM, FECHA)');
     qrycargue.SQL.Add('SELECT');
@@ -683,7 +683,7 @@ begin
 
     qrycargue.SQL.Clear;
     qrycargue.Close;
-    qrycargue.SQL.Add('INSERT INTO');
+    qrycargue.SQL.Add('INSERT OR REPLACE INTO');
     qrycargue.SQL.Add
       ('LOG_ENCABEZADO (CODIGOLOG,COMNUM,COMFEC,COMCON,COMPERAGNO,COMPERMES,COMULTCOS,COMANU,TIPCOMID)');
     qrycargue.SQL.Add('SELECT');
@@ -697,7 +697,7 @@ begin
 
     qrycargue.SQL.Clear;
     qrycargue.Close;
-    qrycargue.SQL.Add('INSERT INTO');
+    qrycargue.SQL.Add('INSERT OR REPLACE INTO');
     qrycargue.SQL.Add
       ('LOG_DETALLE (CODIGOLOG,COMNUM,COMCONS,TIPCOMID,PLACUECOD,COMTIPOMOV,COMVAL,COMNITDET,COMVALRET,COMCONDET,CENCOSID,COMDOCSOP)');
     qrycargue.SQL.Add('SELECT');
@@ -715,6 +715,7 @@ begin
 
     Application.MessageBox('Se han procesado los datos', 'Información',
       MB_OK + MB_ICONINFORMATION);
+      sbtnCargarService.Enabled := False;
     pbProgreso.Position := 0;
   end;
 
@@ -736,7 +737,7 @@ begin
     sListaColumna := TStringList.Create;
     sListaErrores := TStringList.Create;
     qrysecundario := TFDQuery.Create(nil);
-    qrysecundario.Connection := udbModulo.dbModulo.fdConexion;;
+    qrysecundario.Connection := udbModulo.dbModulo.fdConexion;
     sListaEncabezado.Clear;
     sListaColumna.Clear;
     sListaErrores.Clear;
@@ -812,7 +813,7 @@ end;
 
 procedure TfmPrincipal.sbtnEncabezadoClick(Sender: TObject);
 var
-  qryprincipal: TFDQuery;
+  qryprincipal, qryconsulta: TFDQuery;
   odCargarEncabezado: TOpenDialog;
   sListaEncabezado, sListaColumna, sListaErrores: TStringList;
   sNombreArchivo: String;
@@ -823,7 +824,7 @@ begin
   if odCargarEncabezado.Execute then
   begin
     qryprincipal := TFDQuery.Create(nil);
-    qryprincipal.Connection := udbModulo.dbModulo.fdConexion;;
+    qryprincipal.Connection := udbModulo.dbModulo.fdConexion;
     sListaEncabezado := TStringList.Create;
     sListaColumna := TStringList.Create;
     sListaErrores := TStringList.Create;
@@ -859,6 +860,15 @@ begin
       sbtnCargarService.Enabled := False;
       Application.MessageBox('Se ha importado el archivo correctamente',
         'Información', MB_OK + MB_ICONINFORMATION);
+        qryconsulta := TFDQuery.Create(nil);
+      qryconsulta.Connection := udbModulo.dbModulo.fdConexion;
+      qryconsulta.Close;
+      qryconsulta.SQL.Add('SELECT LG.COMNUM FROM LOG_CARGUE LG, COMPROBANTE_ENCABEZADO CE WHERE LG.COMNUM = CE.COMNUM ;');
+      qryconsulta.Open;
+      if not qryconsulta.IsEmpty then
+      Application.MessageBox(Pchar('El número de registro ' +qryconsulta.FieldByName('COMNUM').AsString+ ' ya se encuentra  en la base de datos y será reemplazado.'), 'Información',
+        MB_OK + MB_ICONINFORMATION);
+      qryconsulta.Free;
       sListaCodEncabezado.Sort;
       sListaCodDetalles.Sort;
 
